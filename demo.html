@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Component Experiments and Demo</title>
+        <link rel="stylesheet" href="brick/bick-1.0.1.byob.min.css">
+    </head>
+    <body>
+	<h1>Demo</h1>
+	<p>This probably doesn't really work. It's just an experiment in creating custom elements using x-tag/brick libraries.</p>
+	<p>First, let's try a json hello world type blog.</p>
+	<blockquote><pre><http-get href="http-get/hello-world.json">{}</http-get></pre></blockquote>
+        <p>If this worked then you'll see an empty object fill with properties.</p>
+        <p>Now let's see if we can pull in the README.md file.</p>
+        <section>
+		<marked-content href="README.md"><a href="README.md">Link to README.md file</a></marked-content>
+	</section>
+	<!-- Putting it all together -->
+        <!-- Step 1: Load marked from CDN -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+        <!-- Step 1: Load brick from CDN -->
+        <script src="brick/brick-1.0.1.byob.min.js"></script>
+        <!-- Step 2: Load custom elements -->
+        <script src="http-get/http-get.js"></script>
+        <script src="marked-content/marked-content.js"></script>
+        <!-- Step 3: Setup a DOM listener so we see if this worked. --> 
+        <script>
+        document.addEventListener('DOMComponentsLoaded', function() {
+            console.log("Should have components loaded now.");
+        });
+        </script>
+    </body>
+</html>
