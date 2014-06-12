@@ -9,7 +9,7 @@ to translate that content into HTML.
 ## Usage
 
 ```HTML
-    <h1>My markdown file</h1>
+    <h1>My markdown file as HTML</h1>
     <!-- This is the custom element that loads my-file.md and transforms it into HTML -->
     <marked-content href="my-file.md">
       <!-- Since JavaScript may be disabled, provide a friendly link to the raw Markdown content -->
@@ -20,7 +20,7 @@ to translate that content into HTML.
     <script src="brick/brick-1.0.1.mins.js"></script>
     <!-- Step 2: Load in the marked library needed to transform markdown to HTML -->
     <script src="marked.min.js"></script>
-    <!-- Step 3: Create your custom component -->
+    <!-- Step 3: Create your custom element that renders Markdown files to HTML using marked -->
     <script src="marked-content/marked-content.js"></script>
     <script>
     // When the DOM fires DOMComponentsLoaded we should see our Markdown processed.
@@ -33,4 +33,19 @@ to translate that content into HTML.
 In this configuration we can pull in the markdown file, process it client side and see HTML when
 it is ready. It also uses progressive enhancement so if JavaScript is disabled the markded-content 
 element gets ignored and a link to the raw markdown file is displayed.
+
+## Sometday, maybe, improvements
+
+In the present implementation the HTTP GET request is fired on element creation. This could be blocking. A
+better way would be to get the markdown content only when inserted into the DOM. This would allow you to
+conditionally include the marked-content element with having the overhead of the HTTP GET request.
+
+Good software practice would also suggest making the HTTP GET it's own component and have marked-content
+take data from its innerHTML. When that was changed it would trigger a refresh and translation from markdown
+to HTML by marked library.
+
+A third inmprovement would be to allow different Markdown engines by specifying the URL in an attribute
+for the marked-content element. It would also be useful for the custom element to replace it's outer HTML
+with the translated HTML result from the markdown. 
+
 
