@@ -27,6 +27,8 @@ of the http-get element.
 
 ## someday, maybe improvements
 
++ Finish converting http-get.js from a function to custom element
++ All triggering the HTTP GET on an event such as create, insert, etc.
 + Add alternative URLs if first one fails
 + Add timeout settings
 + Add other error handling options
