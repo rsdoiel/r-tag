@@ -3,17 +3,25 @@
     <head>
         <title>Web Component Experiments and Demo</title>
         <link rel="stylesheet" href="brick/brick-1.0.1.byob.min.css">
+	<style>
+	section {
+		border: 1px solid black;
+		margin: 0.25em;
+		padding: 0.25em;
+	}
+	</style>
     </head>
     <body>
 	<h1>Demo</h1>
 	<p>This probably doesn't really work. It's just an experiment in creating custom elements using x-tag/brick libraries.</p>
-	<p>First, let's try a json hello world type blog.</p>
-	<blockquote><pre><http-get href="http-get/hello-world.json">{}</http-get></pre></blockquote>
+	<p>First, let's try fetching a json hello world blob using &lt;http-get href="http-get/hello-world.json&gt;&lt;/http-get&gt;.</p>
+	<section><pre><http-get href="http-get/hello-world.json">{}</http-get></pre></section>
         <p>If this worked then you'll see an empty object fill with properties.</p>
-        <p>Now let's see if we can pull in the README.md file.</p>
+        <p>Now let's see if we can pull in the README.md file using a &lt;marked-content href="README.md"&gt;&lt;/marked-content&gt; custom element.</p>
         <section>
 		<marked-content href="README.md"><a href="README.md">Link to README.md file</a></marked-content>
 	</section>
+        <p>If this worked you'll see the README markdown document rendered as HTML above this line.</p>
 	<!-- Putting it all together -->
         <!-- Step 1: Load marked from CDN -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
