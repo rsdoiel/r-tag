@@ -74,27 +74,51 @@
         return request;
     }
     
+    function resolveURL(doc_url, href) {
+       var protocol_re = new RegExp('://'),
+           last_slash = doc_url.lastIndexOf('/');
+       if (href.indexOf('://') === -1) {
+           // Concatentate the doc_url and the href
+           if (last_slash === -1) {
+              return doc_url + '/' + href;
+           } 
+           return doc_url.substring(0, last_slash) + '/' + href;
+       }
+       return href;
+    }
+
+
     // Now create my custom element wrapper.
     xtag.register('http-get', {
 	lifecycle: {
             created: function () {
-                this.setAttribute('href', '');
-                this.setAttribute('data', '');
-                this.setAttribute('error', '');
+                var self = this, url = resolveURL(document.URL, this.href);
+                httpGET(url, function (err, data) {
+                    if (err) {
+                        console.log("ERROR", err);
+                        return;
+                    }
+                    if (self.outerHTML !== undefined) { 
+                    	self.outerHTML = data.toString(); 
+                    } else {
+                        self.innerHTML = data.toString();
+                    }
+                }, function (status) {
+                   // erros will get handled on complete.
+                });
             }
         },
         accessors: {
             href: {
                 attribute: { url: "" }
             },
-            outerHTML: {
+            innerHTML: {
                attribute: { String: "" },
                set: function (value) {
-                   // FIXME: need to find out compatility and provide fallback if not exists.
-                   this.outerHTML = value;
+                   this.innerHTML = value;
                },
                get: function () {
-                  return this.data
+                  return this.innerHTML;
                }
             }
         }
