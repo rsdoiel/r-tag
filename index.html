@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>r-tags: A Web Component Experiment</title>
+        <link rel="stylesheet" href="brick/brick-1.0.1.byod.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section>
+            <marked-content href="README.md">see the <a href="README.md">README.md</a> file fro details.</marked-content>
+        </section>
+        <footer>
+        <p><a href="http://mozilla.github.io/brick/">Brick</a>/<a href="http://x-tags.org">x-tags</a> by the Mozilla Foundation (Apache License), <a href="https://github.com/chjj/marked">Marked</a> Copyright (c) 2011-2014, Christopher Jeffrey. (MIT License)</p>
+        <p><em>r-tags</em><br />
+        <marked-content href="LICENSE"></marked-content>
+        </footer>
+
+        <!-- Putting it all together -->
+        <!-- Step 1: Load marked from CDN -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+        <!-- Step 2: Load brick -->
+        <script src="brick/brick-1.0.1.byob.min.js"></script>
+        <!-- Step 3: Load custom elements -->
+        <script src="marked-content/marked-content.js"></script>
+    </body>
+</html>

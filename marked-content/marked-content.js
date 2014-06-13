@@ -34,14 +34,14 @@
         }
 
         if (!request) {
-            if (callback !== undefined) {
+            if (typeof callback !== 'undefined') {
                 callback("Can't create request object");
             }
             return false;
         }
-        if (callback !== undefined) {
+        if (typeof callback !== 'undefined') {
             request.onreadystatechange = function () {
-                if (progress !== undefined) {
+                if (typeof progress !== 'undefined') {
                     switch (request.readyState) {
                     case 0:
                         progress("uninitialized", request);
@@ -85,26 +85,37 @@
         return href;
     }
 
+    function loadContent(elem, url) {
+        httpGET(url, function (err, data) {
+            if (err) {
+                console.log("ERROR", err);
+                return;
+            }
+            if (typeof marked === 'undefined') {
+                elem.innerHTML = '<pre>' + data + '</pre>';
+            } else {
+                marked(data, function (err, content) {
+                    elem.innerHTML = content;
+                });
+            }
+        }, function (status) {
+            // We'll handle the error when complete hits.
+        });
+    }
+
     xtag.register('marked-content', {
         lifecycle: {
             created: function () {
-                var self = this, protocolRe = new RegExp('://');
+                var protocolRe = new RegExp('://');
+                if (typeof this.href !== 'undefined' && this.href) {
+                    loadContent(this, resolveURL(document.URL, this.href));
+                }
                 // Check the URL to see if it is relative.
-                httpGET(resolveURL(document.URL, this.href), function (err, data) {
-                    if (err) {
-                        console.log("ERROR", err);
-                        return;
-                    }
-                    if (marked === undefined) {
-                        self.innerHTML = '<pre>' + data + '</pre>';
-                    } else {
-                        marked(data, function (err, content) {
-                            self.innerHTML = content;
-                        });
-                    }
-                }, function (status) {
-                           // We'll handle the error when complete hits.
-                });
+            },
+            attributeChanged: function () {
+                if (typeof this.href !== 'undefined' && this.href) {
+                    loadContent(this, resolveURL(document.URL, this.href));
+                }
             }
         },
         accessors: {

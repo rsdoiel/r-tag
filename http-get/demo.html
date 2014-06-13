@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>r-tags: http-get custom element</title>
+        <link rel="stylesheet" href="../brick/brick-1.0.1.byob.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <h1>r-tags: http-get custom element</h1>
+	    <h2>Demo</h2>
+	    <p>It's an experiment in creating custom elements using x-tag/brick libraries.</p>
+	    <p>First, let's try fetching a json hello world blob using &lt;http-get href="hello-world.json&gt;&lt;/http-get&gt;.</p>
+	<section><pre><http-get href="hello-world.json">{}</http-get></pre></section>
+        <p>If this worked then you'll see an empty object replace with one filled with properties.</p>
+
+        <!-- Putting it all together -->
+        <!-- Step 1: Load marked from CDN -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+        <!-- Step 2: Load brick -->
+        <script src="../brick/brick-1.0.1.byob.min.js"></script>
+        <!-- Step 3: Load custom elements -->
+        <script src="../http-get/http-get.js"></script>
+        <script>
+        document.addEventListener('DOMComponentsLoaded', function() {
+            console.log("Should see the results of the custom elements now.");
+        });
+        </script>
+    </body>
+</html>

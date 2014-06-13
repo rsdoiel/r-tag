@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>marked-args: demo</title>
+        <link rel="stylesheet" href="../brick/brick-1.0.1.byob.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <h1>marked-args custom element</h1>
+        <p>This experiment show two custom elements working together.
+        The first is <em>marked-content</em> and the second is <em>marked-args</em>.
+        The form <em>marked-content</em> has an id of &ldquo;main&rdquo; and the 
+        second has an id of &ldquo;other&rdquo;. Initially both are empty showing some
+        default text. Click <a href="?main=README.md&other=NAV-DEMO.md">Here</a> to
+        run the demo. <a href="./demo.html">Reset</a> the demo.
+        </p>
+        <section class="main">
+            <marked-content id="main">No &ldquo;main&rdquo; content processed.</marked-content>
+        </section>
+        <section class="other">
+            <marked-content id="other">No &ldquo;other&rdquo; content processed.</marked-content>
+        </section>
+        <!-- Place one marked-args custom element in the page. -->
+        <marked-args></marked-args>
+
+        <!-- Step 1. Load in the Marked libary from CDN -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+        <!-- Step 2: Load brick -->
+        <script src="../brick/brick-1.0.1.byob.min.js"></script>
+        <!-- Step 3: Load custom elements -->
+        <script src="../marked-content/marked-content.js"></script>
+        <script src="./marked-args.js"></script>
+        <!-- Step 4: After everything is loaded we should see a console message. -->
+        <script>
+        document.addEventListener('DOMComponentsLoaded', function() {
+            console.log("Should see the results of the custom elements now.");
+        });
+        </script>
+    </body>
+</html>
