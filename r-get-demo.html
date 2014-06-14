@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head><title>r-tag: demo</title></head>
+    <body>
+        <h1>Load some data</h1>
+        <p>Fill the <em>pre</em> element with <a href="r-get/hello-world.json">hello-world.json</a></h1>
+
+        <pre><r-get href="r-get/hello-world.json">[]</r-get></pre>
+
+        <!-- Step 1: Load Brick so we have x-tag core available -->
+        <script src="brick/brick-1.0.1.min.js"></script>
+        <!-- Step 2: Load our custom element -->
+        <script src="r-get/r-get.js"></script>
+    </body>
+</html>
