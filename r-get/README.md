@@ -7,14 +7,14 @@ This custom element retrieves the content of a URL specified as an *href* attrib
 ## Usage
 
 ```HTML
-    &lt;h1&gt;Here's some data loaded into a &lt;pre&gt; element&lt;/h1&gt;
+    <h1>Here's some data loaded into a &lt;pre&gt; element</h1>
 
-    &lt;pre&gt;&lt;r-get href="hello-world.json"&gt;[]&lt;/r-get&gt;&lt;/pre&gt;
+    <pre><r-get href="hello-world.json">[]</r-get></pre>
 
-    &lt;!-- Step 1: Load Brick so we have x-tag core available --&gt;
-    &lt;script src="brick/brick-1.0.1.min.js"&gt;&lt;/script&gt;
-    &lt;!-- Step 2: Load our custom element --&gt;
-    &lt;script src="r-get/r-get.js"&gt;&lt;/script&gt;
+    <!-- Step 1: Load Brick so we have x-tag core available -->
+    <script src="brick/brick-1.0.1.min.js"></script>
+    <!-- Step 2: Load our custom element -->
+    <script src="r-get/r-get.js"></script>
 ```
 
 ## someday, maybe improvements

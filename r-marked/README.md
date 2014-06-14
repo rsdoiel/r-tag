@@ -34,18 +34,18 @@ In this configuration we can pull in the markdown file, process it client side a
 it is ready. It also uses progressive enhancement so if JavaScript is disabled the markded-content 
 element gets ignored and a link to the raw markdown file is displayed.
 
-## Sometday, maybe, improvements
+## Someday, maybe, improvements
 
-In the present implementation the HTTP GET request is fired on element creation. This could be blocking. A
-better way would be to get the markdown content only when inserted into the DOM. This would allow you to
-conditionally include the r-marked element with having the overhead of the HTTP GET request.
+Present implementation doesn't optimize the number out bound xhr requests. That could be a big performance
+hit depending on how many you had on a page.  It specifying alternate URLS, priority of request, error
+handling options would all be nice.
 
-Good software practice would also suggest making the HTTP GET it's own component and have r-marked
-take data from its innerHTML. When that was changed it would trigger a refresh and translation from markdown
-to HTML by marked library.
+Current implentation places the rendered HTML inside the _r-marked_ element. It would be nice to have
+a choice of using the *outerHTML* as well as the *innerHTML*.
 
-A third inmprovement would be to allow different Markdown engines by specifying the URL in an attribute
-for the r-marked element. It would also be useful for the custom element to replace it's outer HTML
-with the translated HTML result from the markdown. 
+Nesting doesn't really make sense for _r-marked_ elements since you don't have a way of insuring the order of the HTTP GET requests.
+
+Another inmprovement would be to allow different Markdown engines by specifying in an attribute
+for the r-marked element.
 
 

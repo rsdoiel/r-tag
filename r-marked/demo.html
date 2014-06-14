@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>r-tags: r-marked custom element</title>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <link rel="stylesheet" href="../brick/brick-1.0.1.byob.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="../brick/brick-1.0.1.min.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
@@ -20,9 +20,9 @@
         <!-- Step 1: Load marked from CDN -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
         <!-- Step 2: Load brick -->
-        <script src="../brick/brick-1.0.1.byob.min.js"></script>
+        <script src="../brick/brick-1.0.1.min.js"></script>
         <!-- Step 3: Load custom elements -->
-        <script src="../r-marked/r-marked.js"></script>
+        <script src="r-marked.js"></script>
         <!-- Step 4: Setup a DOM listener so we see if this worked. --> 
         <script>
         document.addEventListener('DOMComponentsLoaded', function() {

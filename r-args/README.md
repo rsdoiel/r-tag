@@ -29,7 +29,22 @@ href value in each.
             <section>
                 <r-marked id="other">Other not loaded.</r-marked>
             </section>
+            
+            <!-- Step 1: Load brick -->
+            <script src="brick/brick-1.0.1.min.js"></script>
+            <!-- Step 2: Load custom elements -->
+            <script src="r-marked/r-marked.js"></script>
+            <script src="r-args/r-args.js"></script>
         </body>
     </html>
 ```
+
+If you specify "main" and "other" in the URL parameters you'll overwrite the current contents of _r-marked_ element.
+
+```
+    http://example.com/page.html?main=feature-story.md&other=sidebar.md
+```
+
+In this example the _r-marked_ element with *id="main"* will receive the content of "feature-story.md" rendered as HTML. Likewise the *id="other"* witll get the contents of "sidebar.md" rendered as HTML.
+
 
