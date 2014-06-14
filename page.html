@@ -2,13 +2,24 @@
 <html>
     <head>
         <title>r-tags: wireframe with markdown and web components</title>
-        <link rel="stylesheet" href="./brick/brick-1.0.1.byob.min.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="brick/brick-1.0.1.byob.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <h1>r-tags: wireframe with markdown and web components</h1>
-
-        <r-marked id="main" href="contents.md"></r-marked>
+        <section>
+        <r-marked id="main" href="client-side-rendering.md">An article on <a href="client-side-rendering.md">client site rendering</a></r-marked>
+        </section>
+        <sidebar>
+            <r-marked href="contents.md">
+                <ul>
+                    <li><a href="README.md">README.md</a></li>
+                    <li><a href="client-side-rendering.md">client-side-rendering.md</a></li>
+                    <li><a href="LICENSE">LICENSE</a></li>
+                </ul>
+            </r-marked>
+        </sidebar>
         <r-args></r-args>
         <!-- Putting it all together -->
         <!-- Step 1: Load marked from CDN -->

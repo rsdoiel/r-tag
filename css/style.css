@@ -1,5 +1,11 @@
-            section {
-                border: 1px solid black;
-                margin: 0.25em;
-                padding: 0.25em;
-            }
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+
+section {
+    border: 1px solid black;
+    margin: 0.25em;
+    padding: 0.25em;
+}

@@ -1,36 +1,27 @@
 
+
 # r-get custom element
 
-This custom element retrieves the content of a URL specified as an href attribute and replaces itself 
-with the retrieved content (i.e. outerHTML setting). A default value can be expressed in the innerHTML
-of the r-get element.
+This custom element retrieves the content of a URL specified as an *href* attribute and replaces its *innerHTML* with the retrieved content. A default/fallback value can be expressed in the innerHTML of the r-get element.
 
 ## Usage
 
 ```HTML
-    <h1>Here's some data loaded into a &lt;pre&gt; element</h1>
-    
-    <!-- 
-    <pre><r-get href="http://example.com/json-api-result">[]</r-get></pre>
-    
-    <!-- Step 1: Load Brick so we have x-tag core available -->
-    <script src="brick/brick-1.0.1.min.js"></script>
-    <!-- Step 2: Load our custom element -->
-    <script src="r-get/r-get.js"></script>
-    <script>
-        document.addEventListener('DOMComponentsLoaded', function () {
-            // Our custom component should be loaded and the contents of <pre>
-            // Updated with values.
-        });
-    </script>
+    &lt;h1&gt;Here's some data loaded into a &lt;pre&gt; element&lt;/h1&gt;
+
+    &lt;pre&gt;&lt;r-get href="hello-world.json"&gt;[]&lt;/r-get&gt;&lt;/pre&gt;
+
+    &lt;!-- Step 1: Load Brick so we have x-tag core available --&gt;
+    &lt;script src="brick/brick-1.0.1.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Step 2: Load our custom element --&gt;
+    &lt;script src="r-get/r-get.js"&gt;&lt;/script&gt;
 ```
 
 ## someday, maybe improvements
 
-+ Finish converting r-get.js from a function to custom element
-+ All triggering the HTTP GET on an event such as create, insert, etc.
 + Add alternative URLs if first one fails
 + Add timeout settings
 + Add other error handling options
 + Allow check for mime-type
 + Allow check to process the results with another JS function
+

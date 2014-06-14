@@ -14,10 +14,10 @@ websites where Markdown documents serve as content source files and HTML pages r
 + The JavaScript
     - [r-get](r-get/r-get.js)
     - [r-marked](r-marked/r-marked.js)
-    - [r-args](r-args/r-args.js)
+    - [r-args](r-args/r-args.js) 
 
 
-The last two elements allow you to treat HTML pages of rendering engines allowing you to quickly prototype websites using Markdown for content and menus and standard HTML elements and Brick custom elements wireframing the UI.
+The last two elements allow you to treat HTML pages as rendering engines allowing you to quickly prototype websites using Markdown for content, navigation with standard HTML elements and Brick custom elements additional UI prototyping.
 
 
 r-tags depends on
