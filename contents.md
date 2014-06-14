@@ -5,13 +5,9 @@
     - [r-marked](page.html?main=r-marked%2FREADME.md)
     - [r-args](page.html?main=r-args%2FREADME.md)
 + r-tags&rsquo; [LICENSE](page.html?main=LICENSE)
-+ Demos
-    - [r-get](r-get/demo.html)
-    - [r-marked](r-marked/demo.html)
-    - [r-args](r-args/demo.html)
-+ [Souce Code](https://github.com/rsdoiel/r-tags)
++ Souce Code
     - [r-get.js](r-get/r-get.js)
     - [r-marked.js](r-marked/r-marked.js)
     - [r-args.js](r-args/r-args.js)
 + [README.md](page.html?main=README.md) - Project Description
-
++ [Github](https://github.com/rsdoiel/r-tags)
