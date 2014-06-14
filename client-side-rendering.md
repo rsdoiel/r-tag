@@ -12,7 +12,7 @@ prove useful. I had fun building it.
 
 ## r-tags evolution
 
-Over a lunch I was thinking about client side content rendering of markdown. Previously I had build a custom element for processing markdown files for my personal [website](http://rsdoiel.github.io). It worked nicely even on my cell phone's web brower. How I could use this approach to make more complicated content pages? I didn't want to have to write HTML wrapers for each markdown document. I needed a way to use the the same HTML page as a content rendering engine for one or more markdown documents. I needed a way to generate navigation between pages.
+Over a lunch I was thinking about client side content rendering of markdown. Previously I had build a custom element for processing markdown files for my personal [website](http://rsdoiel.github.io). It worked nicely even on my cell phone's web browser. Could I use this approach to make more complicated content pages? I didn't want to have to write HTML wrapers for each markdown document. I needed a way to use the the same HTML page as a content rendering engine for one or more markdown documents. I needed a way to generate navigation between pages.
 
 A sip of coffee and I focused on site navigation. With server side engines like Wordpress navigation/menus are part of the theme and administrative setup. I remembered this because one of the clients at work need to tweak the default permissions for editors so that the editors could edit menus. Sometimes that is a good idea sometimes not. If the menus (navigation) had been content to begin with then the existing permissions would have worked fine.
 
