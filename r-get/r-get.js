@@ -1,9 +1,9 @@
 /*!
  * r-get.js - a simple wrapper for an xhr HTTP GET as Web Component.
- * @author: R. S. Doiel <rsdoiel@gmail.com>
- * copyright (c) 2014
- * Released under the BSD 2-clause license.
- * Based on example from http://docs.webplatform.org/wiki/apis/xhr/XMLHttpRequest
+ * @author: R. S. Doiel, <rsdoiel@yahoo.com>
+ * 
+ * Based on http://docs.webplatform.org/wiki/apis/xhr/XMLHttpRequest
+ * See Mozilla's website for information on their license policy.
  */
 /*jslint browser: true, indent: 4, maxlen: 120 */
 /*global ActiveXObject, XDomainRequest */
