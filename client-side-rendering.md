@@ -78,7 +78,7 @@ All the data I need is there, the HTML file to use, the markdown file to fill wi
 Soon I realized that works except it only allows from a single _r-marked_ element per HTML document.  What I really needed was--
 
 1. a way to specify the HTML file rendering the content
-2. a way to specify one or more markdown elements
+2. a way to specify one or more markdown documents
 3. a way to target specific _r-marked_ elements with a specific markdown document
 
 I started thinking about the _r-marked_ custom element I had already prototyped for rendering my home page and CV. It was only half right. The *href* in the _r-marked_ in the HTML was hard coded. When the element was created it immediately fetched the content. If the *href* was missing it died.  I needed more flexibility. I needed to allow the *href* to change and when it changed update the content rendered.  Fortunately [x-tags](http://x-tags.org) made that very easy to add by modifying the Web Component's lifecycle.
