@@ -1,6 +1,10 @@
 /**
  * r-args.js - Look at the page's GET args, find targeted marked content 
  * custom elements and have their href element rendering new content.
+ * @author: R. S. Doiel, <rsdoiel@yahoo.com>
+ * copyright (c) 2014
+ * All Rights Reserved.
+ * Released under the BSD 2-Clause License.
  */
 /*jslint browser: true, indent: 4 */
 /*global xtag, console, ActiveXObject, XDomainRequest, marked */

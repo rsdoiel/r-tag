@@ -1,5 +1,9 @@
 /**
  * r-marked.js - This is a web component based on x-tags/Brick for rendering Markdown content directly into a page.
+ * @author: R. S. Doiel, <rsdoiel@yahoo.com>
+ * copyright (c) 2014
+ * All Rights Reserved.
+ * Released under the BSD 2-Clause License.
  */
 /*jslint browser: true, indent: 4 */
 /*global xtag, console, ActiveXObject, XDomainRequest, marked */
