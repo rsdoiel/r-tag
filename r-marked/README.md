@@ -44,4 +44,5 @@ Nesting doesn't really make sense for _r-marked_ elements since you don't have a
 Another inmprovement would be to allow different Markdown engines by specifying in an attribute
 for the r-marked element.
 
+If the component was clever I would look at the headers and see if they indicated when/how long I should cache. I could then save the content in local storage and only have the overhead of a head request to see when to update it.
 
