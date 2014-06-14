@@ -9,7 +9,6 @@ body {
 a:link, a:active, a:hover, a:visited {
     color: #85CD00;
     text-decoration: none;
-    font-style: oblique;
     font-weight: 600;
 }
 
