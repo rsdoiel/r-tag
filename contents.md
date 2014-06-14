@@ -11,4 +11,4 @@
     - [r-args.js](r-args/r-args.js)
 + [README.md](page.html?main=README.md) - Project Description
 + [Github](https://github.com/rsdoiel/r-tags)
-+ [Me](https://rsdoiel.github.io)
++ [Me](http://rsdoiel.github.io)
