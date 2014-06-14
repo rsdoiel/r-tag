@@ -1,9 +1,9 @@
 
-# http-get custom element
+# r-get custom element
 
 This custom element retrieves the content of a URL specified as an href attribute and replaces itself 
 with the retrieved content (i.e. outerHTML setting). A default value can be expressed in the innerHTML
-of the http-get element.
+of the r-get element.
 
 ## Usage
 
@@ -11,12 +11,12 @@ of the http-get element.
     <h1>Here's some data loaded into a &lt;pre&gt; element</h1>
     
     <!-- 
-    <pre><http-get href="http://example.com/json-api-result">[]</http-get></pre>
+    <pre><r-get href="http://example.com/json-api-result">[]</r-get></pre>
     
     <!-- Step 1: Load Brick so we have x-tag core available -->
     <script src="brick/brick-1.0.1.min.js"></script>
     <!-- Step 2: Load our custom element -->
-    <script src="http-get/http-get.js"></script>
+    <script src="r-get/r-get.js"></script>
     <script>
         document.addEventListener('DOMComponentsLoaded', function () {
             // Our custom component should be loaded and the contents of <pre>
@@ -27,7 +27,7 @@ of the http-get element.
 
 ## someday, maybe improvements
 
-+ Finish converting http-get.js from a function to custom element
++ Finish converting r-get.js from a function to custom element
 + All triggering the HTTP GET on an event such as create, insert, etc.
 + Add alternative URLs if first one fails
 + Add timeout settings

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>r-tags: marked-content custom element</title>
+        <title>r-tags: r-marked custom element</title>
         <link rel="stylesheet" href="../brick/brick-1.0.1.byob.min.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <h1>r-tags: marked-content custom element</h1>
+        <h1>r-tags: r-marked custom element</h1>
 	    <h2>Demo</h2>
 	    <p>It's an experiment in creating custom elements using x-tag/brick libraries.</p>
-        <p>Let's see if we can pull in the README.md file using a &lt;marked-content href="README.md"&gt;&lt;/marked-content&gt; custom element.</p>
+        <p>Let's see if we can pull in the README.md file using a &lt;r-marked href="README.md"&gt;&lt;/r-marked&gt; custom element.</p>
         <section>
-		    <marked-content href="README.md"><a href="README.md">Link to README.md file</a></marked-content>
+		    <r-marked href="README.md"><a href="README.md">Link to README.md file</a></r-marked>
 	</section>
         <p>If this worked you'll see the README markdown document rendered as HTML above this line.</p>
         
@@ -21,7 +21,7 @@
         <!-- Step 2: Load brick -->
         <script src="../brick/brick-1.0.1.byob.min.js"></script>
         <!-- Step 3: Load custom elements -->
-        <script src="../marked-content/marked-content.js"></script>
+        <script src="../r-marked/r-marked.js"></script>
         <!-- Step 4: Setup a DOM listener so we see if this worked. --> 
         <script>
         document.addEventListener('DOMComponentsLoaded', function() {
