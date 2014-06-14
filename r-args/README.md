@@ -47,3 +47,5 @@ If you specify "main" and "other" in the URL parameters you'll overwrite the cur
 ```
 
 In this example the _r-marked_ element with *id="main"* will receive the content of "r-args/README.md" rendered as HTML. Likewise the *id="other"* will get the contents of "r-args/NAV_DEMO.md" rendered as HTML.
+
+Run [r-args](r-args-demo.html) the demo.
