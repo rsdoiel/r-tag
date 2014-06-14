@@ -77,7 +77,7 @@ All the data I need is there, the HTML file to use, the markdown file to fill wi
 
 Soon I realized that works except it only allows from a single _r-marked_ element per HTML document.  What I really needed was--
 
-1. a way to specify the HTML file rendering te content
+1. a way to specify the HTML file rendering the content
 2. a way to specify one or more markdown elements
 3. a way to target specific _r-marked_ elements with a specific markdown document
 
