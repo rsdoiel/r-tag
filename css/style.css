@@ -2,10 +2,21 @@ body {
     font-size: 16px;
     color: black;
     background-color: white;
+    width: 100%;
+    height: auto;
 }
 
 section {
+    float: left;
     border: 1px solid black;
     margin: 0.25em;
     padding: 0.25em;
+    max-width: 75%;
+    width: auto;
+    height: auto;
+}
+
+sidebar {
+    float: right;
+    width: 20%;
 }

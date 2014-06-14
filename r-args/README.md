@@ -1,7 +1,7 @@
 
 # r-args
 
-The custom element named _r-args_ is design to look at the URL parameters browser side and based on the key/value pairs present update the contents if the current pages' _r-marked_ blocks.
+The custom element named _r-args_ is design to look at the URL parameters browser side and based on the key/value pairs present update the contents if the current pages' _r-marked_ blocks match.
 
 Here's the basic algorithm
 
