@@ -19,7 +19,7 @@ to translate that content into HTML.
     <!-- Step 1: Load in the marked library needed to transform markdown to HTML -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
     <!-- Step 2: Load Brick so we pickup x-tag core -->
-    <script src="brick/brick-1.0.1.mins.js"></script>
+    <script src="brick/brick-1.0.1.min.js"></script>
     <!-- Step 3: Create your custom element that renders Markdown files to HTML using marked -->
     <script src="r-marked/r-marked.js"></script>
 ```
@@ -28,7 +28,7 @@ In this configuration we can pull in the markdown file, process it client side a
 it is ready. It also uses progressive enhancement so if JavaScript is disabled the markded-content 
 element gets ignored and a link to the raw markdown file is displayed.
 
-Give it a [try](page.html?main=r-marked/README.md)
+Give it a [try](r-marked-demo.html)
 
 ## Someday, maybe, improvements
 

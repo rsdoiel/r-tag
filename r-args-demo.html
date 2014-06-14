@@ -9,12 +9,9 @@
     <body>
         <h1>r-args custom element</h1>
         <p>This experiment show two custom elements working together.
-        The first is <em>r-marked</em> and the second is <em>r-args</em>.
-        The form <em>r-marked</em> has an id of &ldquo;main&rdquo; and the 
-        second has an id of &ldquo;other&rdquo;. Initially both are empty showing some
-        default text. Click <a href="?main=README.md&other=NAV-DEMO.md">Here</a> to
-        run the demo. <a href="./demo.html">Reset</a> the demo.
-        </p>
+        The first is <em>r-marked</em> and the second is <em>r-args</em>.</p>
+        <p>Their are two of the <em>r-marked</em> elements. The first has an <b>id</b> of &ldquo;main&rdquo; and the second has an <b>id</b> of &ldquo;other&rdquo;. Initially both are empty showing some default text.</p>
+        <p>Click <a href="r-args-demo.html?other=r-args%2FNAV-DEMO.md">here</a> to start. Notices the second box has a reset link.</p>
         <section class="main">
             <r-marked id="main">No &ldquo;main&rdquo; content processed.</r-marked>
         </section>
@@ -27,15 +24,10 @@
         <!-- Step 1. Load in the Marked libary from CDN -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
         <!-- Step 2: Load brick -->
-        <script src="../brick/brick-1.0.1.min.js"></script>
+        <script src="brick/brick-1.0.1.min.js"></script>
         <!-- Step 3: Load custom elements -->
-        <script src="../r-marked/r-marked.js"></script>
-        <script src="r-args.js"></script>
+        <script src="r-marked/r-marked.js"></script>
+        <script src="r-args/r-args.js"></script>
         <!-- Step 4: After everything is loaded we should see a console message. -->
-        <script>
-        document.addEventListener('DOMComponentsLoaded', function() {
-            console.log("Should see the results of the custom elements now.");
-        });
-        </script>
     </body>
 </html>
