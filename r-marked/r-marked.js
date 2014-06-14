@@ -1,5 +1,5 @@
 /**
- * marked-content.js - This is a web component based on x-tags/Brick for rendering Markdown content directly into a page.
+ * r-marked.js - This is a web component based on x-tags/Brick for rendering Markdown content directly into a page.
  */
 /*jslint browser: true, indent: 4 */
 /*global xtag, console, ActiveXObject, XDomainRequest, marked */
@@ -103,7 +103,7 @@
         });
     }
 
-    xtag.register('marked-content', {
+    xtag.register('r-marked', {
         lifecycle: {
             created: function () {
                 var protocolRe = new RegExp('://');

@@ -1,5 +1,5 @@
 /**
- * marked-args.js - Look at the page's GET args, find targeted marked content 
+ * r-args.js - Look at the page's GET args, find targeted marked content 
  * custom elements and have their href element rendering new content.
  */
 /*jslint browser: true, indent: 4 */
@@ -24,10 +24,10 @@
     }
 
 
-    xtag.register('marked-args', {
+    xtag.register('r-args', {
         lifecycle: {
             created: function () {
-                var mc_elem = document.querySelectorAll("marked-content"),
+                var mc_elem = document.querySelectorAll("r-marked"),
                     args = parseWindowSearch(window.location.search),
                     ids = Object.keys(args),
                     elem = {},

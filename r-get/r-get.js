@@ -1,5 +1,5 @@
 /*!
- * http-get.js - a simple wrapper for an xhr HTTP GET as Web Component.
+ * r-get.js - a simple wrapper for an xhr HTTP GET as Web Component.
  * @author: R. S. Doiel <rsdoiel@gmail.com>
  * copyright (c) 2014
  * Released under the BSD 2-clause license.
@@ -89,7 +89,7 @@
 
 
     // Now create my custom element wrapper.
-    xtag.register('http-get', {
+    xtag.register('r-get', {
 	lifecycle: {
             created: function () {
                 var self = this, url = resolveURL(document.URL, this.href);

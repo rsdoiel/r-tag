@@ -40,7 +40,7 @@ might look like--
 ```
     + [Home](index.html?render=index.md)
     + [Articles](article.html?render=articles.md)
-        - [Young Person's Guide to Web Compenents](article.html?render=articles/web-components.md)
+        - [Young Person's Guide to Web Compenents](article.html?render=articles%2Fweb-components.md)
     + [CV](cv.html?render=cv.md)
     + [About Me](index.html?render=bio.md)
 ```
@@ -52,7 +52,7 @@ And that should render out pretty close to what I need.
         <li><a href="index.html?render=index.md">Home</a></li>
         <li><a href="article.html?render=articles.md">Article</a>
             <ul>
-                <li><a href="article.html?render=articles/web-components.md">Young Person's Guide to Web Compenents</a></li>
+                <li><a href="article.html?render=articles%2Fweb-components.md">Young Person's Guide to Web Compenents</a></li>
             </ul>
         </li>
         <li><a href="cv.html?render=cv.md">CV</a></li>
@@ -87,7 +87,7 @@ That seems flexible enough.  Now let's try our nav again.
 ```
     + [Home](index.html?main-content=index.md)
     + [Articles](article.html?main-content=articles.md)
-        - [Young Person's Guide to Web Compenents](article.html?main-content=articles/web-components.md)
+        - [Young Person's Guide to Web Compenents](article.html?main-content=articles%2Fweb-components.md)
     + [CV](cv.html?main-content=cv.md)
     + [About Me](index.html?main-content=bio.md)
 ```
