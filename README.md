@@ -3,8 +3,7 @@
 
 ## Wireframe websites with Markdown documents and Web Components
 
-This started as an experiment to learn how web components worked.  I wound up writing three simple web components. Two let you easy create wireframe
-websites where Markdown documents serve as content source files and HTML pages run as render engines.
+This started as an experiment to learn how web components worked.  I wound up writing two simple web components. They let you easy create wireframe websites where Markdown documents serve as content source files and HTML pages run as render engines.
 
 + [Client Side Rendering](page.html?main=client-side-rendering.md), a story about how this works and evolved.
 + Quick Demos
