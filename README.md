@@ -8,11 +8,9 @@ websites where Markdown documents serve as content source files and HTML pages r
 
 + [Client Side Rendering](page.html?main=client-side-rendering.md), a story about how this works and evolved.
 + Quick Demos
-    - [r-get](r-get-demo.html) brings content into its innerHTML via an Ajax call.
-    - [r-marked](r-marked-demo.html) builds on _r-get_ custom element by process the contents it fetches with the [marked](https://github.com/chjj/marked) Markdown processor rendering HTML into the innerHTML of the custom element.
+    - [r-marked](r-marked-demo.html) builds on JavaScript xhr creating a custom element retrieves a markdown document and processes it the [marked](https://github.com/chjj/marked) Markdown processor rendering HTML into the innerHTML of the custom element.
     - [r-args](r-args-demo.html) doesn't render anything, its a processing custom element. It looks at the URL parameters passed to the page finding matching _r-marked_ element *id* attributes. If it finds one then updates the _r-marked_ element's *href* attribute causing new content to be render into the page.
 + The JavaScript
-    - [r-get](r-get/r-get.js)
     - [r-marked](r-marked/r-marked.js)
     - [r-args](r-args/r-args.js) 
 

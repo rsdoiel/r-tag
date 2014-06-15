@@ -43,7 +43,7 @@ We have an HTML page with two _r-marked_ elements. One had the _id_ attribute of
 If you specify "main" and "other" in the URL parameters you'll overwrite the current contents of _r-marked_ element.
 
 ```
-    page.html?main=r-get%2fREADME.md&other=r-get%2FNAV-DMEO.md
+    page.html?main=r-args%2fREADME.md&other=r-args%2FNAV-DMEO.md
 ```
 
 In this example the _r-marked_ element with *id="main"* will receive the content of "r-args/README.md" rendered as HTML. Likewise the *id="other"* will get the contents of "r-args/NAV_DEMO.md" rendered as HTML.
