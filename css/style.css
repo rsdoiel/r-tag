@@ -27,8 +27,12 @@ header {
     margin-left: 0.25em;
     margin-right: 0.25em;
     text-align: center;
-    color: #85CD00;
+    color: #436402;
     background-color: #B6FF00;
+}
+
+header > h1 > a:link, header > h1 > a:active, header > h1 > a:visited {
+    color: #436402;
 }
 
 section {
