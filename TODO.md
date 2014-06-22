@@ -8,4 +8,4 @@
 + Come up with better name for project and custom elements
 + Add fallback could to load local marked file if CDN is not reachable.
 	- see jquery fallback example at http://modernizr.com/docs/#polyfills
-+ Cleanup and submit to a web component catologue
++ Cleanup and submit to a web component catalogue
