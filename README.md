@@ -19,7 +19,7 @@ The last two elements allow you to treat HTML pages as rendering engines allowin
 
 r-tags depends on
 
-+ [Brick](http://mozilla.github.io/brick/) by Mozilla
++ [Brick](http://mozbrick.github.io/) by Mozilla
 + [Marked](https://github.com/chjj/marked) by Christopher Jeffrey
 
 
