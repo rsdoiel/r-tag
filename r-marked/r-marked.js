@@ -1,9 +1,9 @@
 /**
  * r-marked.js - This is a web component based on x-tags/Brick for rendering Markdown content directly into a page.
- * @author: R. S. Doiel, <rsdoiel@yahoo.com>
+ * @author R. S. Doiel, <rsdoiel@gmail.com>
  * copyright (c) 2014
  * All Rights Reserved.
- * Released under the BSD 2-Clause License.
+ * @license Released under the BSD 2-Clause License.
  */
 /*jslint browser: true, indent: 4 */
 /*global xtag, console, ActiveXObject, XDomainRequest, marked */
@@ -25,7 +25,7 @@
             request = new XMLHttpRequest();
         } else if (typeof XDomainRequest !== 'undefined') { // IE 9
             request = new XDomainRequest();
-        } else if (typeof window.ActiveXObject) { // IE 8 and older
+        } else if (typeof window.ActiveXObject !== 'undefined') { // IE 8 and older
             try {
                 request = new ActiveXObject("Msxml2.XMLHTTP");
             } catch (err1) {
@@ -75,10 +75,9 @@
         request.send();
         return request;
     }
-    
+
     function resolveURL(doc_url, href) {
-        var protocol_re = new RegExp('://'),
-            last_slash = doc_url.lastIndexOf('/');
+        var last_slash = doc_url.lastIndexOf('/');
         if (href.indexOf('://') === -1) {
             // Concatentate the doc_url and the href
             if (last_slash === -1) {
@@ -92,7 +91,7 @@
     function loadContent(elem, url) {
         httpGET(url, function (err, data) {
             if (err) {
-                console.log("ERROR", err);
+                console.error("ERROR", err);
                 return;
             }
             if (typeof marked === 'undefined') {
@@ -104,6 +103,12 @@
             }
         }, function (status) {
             // We'll handle the error when complete hits.
+            //FIXME: need to emit status events using xtag.fireEvent();
+            xtag.fireEvent(elem, 'readyState', {
+                detail: {
+                    status: status
+                }
+            });
         });
     }
 

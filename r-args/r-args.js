@@ -1,24 +1,23 @@
 /**
  * r-args.js - Look at the page's GET args, find targeted marked content 
  * custom elements and have their href element rendering new content.
- * @author: R. S. Doiel, <rsdoiel@yahoo.com>
+ * @author R. S. Doiel, <rsdoiel@gmail.com>
  * copyright (c) 2014
  * All Rights Reserved.
- * Released under the BSD 2-Clause License.
+ * @license Released under the BSD 2-Clause License.
  */
 /*jslint browser: true, indent: 4 */
 /*global xtag, console, ActiveXObject, XDomainRequest, marked */
 (function () {
     "use strict";
     function parseWindowSearch(arg_string) {
-        var args = {},
-            kv_pairs;
+        var args = {};
             
         if (typeof arg_string === 'undefined' || arg_string === '') {
             return {};
         }
         arg_string.substring(1).split("&").forEach(function (pair) {
-            var kv_pair = [], key = "", value = "";            
+            var kv_pair = [], key = "", value = "";
             kv_pair = pair.split('=', 2);
             key = decodeURIComponent(kv_pair[0]);
             value = decodeURIComponent(kv_pair[1]);
