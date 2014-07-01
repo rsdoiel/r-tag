@@ -115,7 +115,6 @@
     xtag.register('r-marked', {
         lifecycle: {
             created: function () {
-                var protocolRe = new RegExp('://');
                 if (typeof this.href !== 'undefined' && this.href) {
                     loadContent(this, resolveURL(document.URL, this.href));
                 }
