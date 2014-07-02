@@ -24,5 +24,8 @@
         + attribute target
         + replacement value array
 + Add custom element to dropin Fargo outliner
-
++ Add a custom loader element
+    + support for CDN  and fallcallback src attributes
+    + support for grabbing JSON blobs and assigning to an object
+    + optional caching of content loaded in local storage
 
