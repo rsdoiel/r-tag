@@ -3,8 +3,7 @@
 
 ## A markdown custom element
 
-r-marked uses an xhr wrapper to retrieve a markdown file and then uses the [marked]() JavaScript library
-to translate that content into HTML.  
+r-marked uses an xhr wrapper to retrieve a markdown file and then uses the [marked]() JavaScript library to translate that content into HTML.  
 
 ## Usage
 
@@ -28,21 +27,7 @@ In this configuration we can pull in the markdown file, process it client side a
 it is ready. It also uses progressive enhancement so if JavaScript is disabled the markded-content 
 element gets ignored and a link to the raw markdown file is displayed.
 
+Current implentation emmits a progress event.  The progress event corresponds to the fetch state of the xhr request (e.g. loaded, interactive, complete).
+
 Give it a [try](r-marked-demo.html)
-
-## Someday, maybe, improvements
-
-Present implementation doesn't optimize the number out bound xhr requests. That could be a big performance
-hit depending on how many you had on a page.  It specifying alternate URLS, priority of request, error
-handling options would all be nice.
-
-Current implentation places the rendered HTML inside the _r-marked_ element. It would be nice to have
-a choice of using the *outerHTML* as well as the *innerHTML*.
-
-Nesting doesn't really make sense for _r-marked_ elements since you don't have a way of insuring the order of the HTTP GET requests.
-
-Another inmprovement would be to allow different Markdown engines by specifying in an attribute
-for the r-marked element.
-
-If the component was clever I would look at the headers and see if they indicated when/how long I should cache. I could then save the content in local storage and only have the overhead of a head request to see when to update it.
 

@@ -104,9 +104,11 @@
         }, function (status) {
             // We'll handle the error when complete hits.
             //FIXME: need to emit status events using xtag.fireEvent();
-            xtag.fireEvent(elem, 'readyState', {
+            xtag.fireEvent(elem, 'progress', {
+                bubbles: true,
+                cancelable: true,
                 detail: {
-                    status: status
+                    state: status
                 }
             });
         });
@@ -118,7 +120,6 @@
                 if (typeof this.href !== 'undefined' && this.href) {
                     loadContent(this, resolveURL(document.URL, this.href));
                 }
-                // Check the URL to see if it is relative.
             },
             attributeChanged: function () {
                 if (typeof this.href !== 'undefined' && this.href) {
