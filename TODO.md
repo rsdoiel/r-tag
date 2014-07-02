@@ -10,6 +10,7 @@
 + Cleanup and submit to a web component catalogue/repository
 + Extend r-marked attributes to allow full configuration of marked rendering
 + Add support for contenteditable in r-marked block
++ Add a previewer for input type file
 + Add a analog clock face element that can serve as a time input
     - extend HTML5 time input type
     - allow setting multiple times
@@ -28,4 +29,3 @@
     + support for CDN  and fallcallback src attributes
     + support for grabbing JSON blobs and assigning to an object
     + optional caching of content loaded in local storage
-
