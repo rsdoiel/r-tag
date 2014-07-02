@@ -14,9 +14,9 @@ We have an HTML page with two _r-marked_ elements. One had the _id_ attribute of
 
 ```HTML
         <h1>r-args custom element</h1>
-        <p>This experiment show two custom elements working together.
+        <p>This experiment shows two custom elements working together.
         The first is <em>r-marked</em> and the second is <em>r-args</em>.
-        The form <em>r-marked</em> has an id of &ldquo;main&rdquo; and the 
+        The custom element <em>r-marked</em> has an id of &ldquo;main&rdquo; and the 
         second has an id of &ldquo;other&rdquo;. Initially both are empty showing some
         default text. Click <a href="?main=README.md&other=NAV-DEMO.md">Here</a> to
         run the demo. <a href="./demo.html">Reset</a> the demo.
