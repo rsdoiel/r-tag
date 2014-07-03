@@ -16,6 +16,8 @@
 
 ## Someday, maybe implementation
 
++ Consider adding a timer element that can swap content sources based on network congestion.
+    - needs to make good guesses about network speed in less than 1 second so overall page loads in less than 3 seconds
 + Come up with better name for project and custom elements
 + Add support for contenteditable in r-marked block
 + Add a random content picker element (per discusion about interactive fiction with Joe Peters)
