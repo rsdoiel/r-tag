@@ -1,14 +1,22 @@
 
-# Someday, maybe implementation
+# todo
 
-+ Tag release of 0.0.1
-+ Setup script to provide minified versions in a combined file for all r-tags
-+ Setup code to build with Grunt
++ r-marked
+    - Add support to render markdown from the innerHTML of an _r-marked_ element.
+    - Extend r-marked attributes to allow full configuration of marked rendering
++ package for release
+    - Setup code to build with Grunt
+    - Setup script to provide minified versions in a combined file for all r-tags
+    - Tag release of 0.0.1
+    - Cleanup and submit to a web component catalog/repository
+
+## prototyping
+
++ r-assert - create a custom element that can be used easily to create fallback script or image elements based on an assertion.
+
+## Someday, maybe implementation
+
 + Come up with better name for project and custom elements
-+ Add fallback code to load local marked file if CDN is not reachable.
-	- see jquery fallback example at http://modernizr.com/docs/#polyfills
-+ Cleanup and submit to a web component catalogue/repository
-+ Extend r-marked attributes to allow full configuration of marked rendering
 + Add support for contenteditable in r-marked block
 + Add a previewer for input type file
 + Add a analog clock face element that can serve as a time input
