@@ -1,22 +1,17 @@
 
 # client side rendering
 
-r-tags supports easy client side rendering of markdown content using standard HTML pages
-as rendering engines. It does this by adding two custom elements (a.k.a. Web Components).
-They are _r-marked_ and _r-args_.  With those two it is easy to create complex HTML pages that
-use markdown documents to fill content areas and even describe navigation elments. This is the story
-of how _r-tags_ evolved and came to hold its present shape. Hopefully this experiment will 
-prove useful. I had fun building it.
+r-tags supports easy client side rendering of markdown content using standard HTML pages as rendering engines. It does this by adding two custom elements (a.k.a. Web Components).  They are _r-marked_ and _r-args_.  With those two it is easy to create complex HTML pages that use markdown documents to fill content areas and even describe navigation elments. This is the story of how _r-tags_ evolved and came to hold its present shape. Hopefully this experiment will prove useful. I had fun building it.
 -- rsd, 2014-06-13
 
 
 ## r-tags evolution
 
-Over a lunch I was thinking about client side content rendering of markdown. Previously I had build a custom element for processing markdown files for my personal [website](http://rsdoiel.github.io). It worked nicely even on my cell phone's web browser. Could I use this approach to make more complicated content pages? I didn't want to have to write HTML wrapers for each markdown document. I needed a way to use the the same HTML page as a content rendering engine for one or more markdown documents. I needed a way to generate navigation between pages.
+Over a lunch I was thinking about client side content rendering of markdown. Previously I had build a custom element for processing markdown files for my personal [website](http://rsdoiel.github.io). It worked nicely even on my cell phone web browser. Could I use this approach to make more complicated content pages? I needed a way to use the the same HTML page as a content rendering engine for one or more markdown documents. I needed a way to generate navigation between pages easily.
 
 A sip of coffee and I focused on site navigation. With server side engines like Wordpress navigation/menus are part of the theme and administrative setup. I remembered this because one of the clients at work need to tweak the default permissions for editors so that the editors could edit menus. Sometimes that is a good idea sometimes not. If the menus (navigation) had been content to begin with then the existing permissions would have worked fine.
 
-After a few more sips of coffee I decide treating navigation as content seems like a good way to go. Navigation can be built from a *ul* element.  That's easy in markdown.  I wondered, "what metadata do I need to carry forward to make it all work? Do I need more web components?"  My initial requirements look like--
+After a few more sips of coffee I decide treating navigation as content seems like a good way to go. Navigation can be built from a *ul* element.  That is easy in markdown.  I wondered, "what metadata do I need to carry forward to make it all work? Do I need more web components?"  My initial requirements look like--
 
 1. I need a way to link to an HTML file where it knows how to process the mardkdown content into HTML
 2. I need a way to transform a UL list of links calling those HTML files with the appropriate markdown documents
@@ -31,7 +26,7 @@ I sketched a markdown file that would render a *ul* list linking to markdown doc
     + [About Me](bio.md)
 ```
 
-That's a good start but we're linking directly to the markdown document and they're not HTML. The markdown above renders out something like--
+That is a good start but think links are directly to the markdown document and not to the HTML. The markdown above renders out something like--
 
 ```
     <ul>
