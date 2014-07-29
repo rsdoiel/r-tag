@@ -97,6 +97,15 @@
             if (typeof marked === 'undefined') {
                 elem.innerHTML = '<pre>' + data + '</pre>';
             } else {
+                marked.setOptions({
+                    gfm: self.getAttribute('gfm'),
+                    tables: self.getAttribute('tables'),
+                    breaks: self.getAttribute('breaks'),
+                    pedantic: self.getAttribute('pedantic'),
+                    sanitize: self.getAttribute('sanitize'),
+                    smartLists: self.getAttribute('smartLists'),
+                    smartypants: self.getAttribute('smartypants')
+                });
                 marked(data, function (err, content) {
                     elem.innerHTML = content;
                 });
@@ -130,6 +139,27 @@
         accessors: {
             href: {
                 attribute: { url: ""}
+            },
+            gfm: {
+                 attribute: {bool: true}
+            },
+            tables: {
+                 attribute: {bool: true}
+            },
+            breaks: {
+                 attribute: {bool: false}
+            },
+            pedantic: {
+                 attribute: {bool: false}
+            },
+            sanitize: {
+                 attribute: {bool: true}
+            },
+            smartLists: {
+                 attribute: {bool: true}
+            },
+            smartypants: {
+                 attribute: {bool: false}
             }
         }
     });
