@@ -1,13 +1,16 @@
 
 # todo
 
++ Update source to conform to Mozilla Brick dependency
++ Test on Firefox OS, tweak for performance
 + r-marked
     - Extend r-marked attributes to allow full configuration of marked rendering
-    - Allow alternative markdown rendering engines to be used with the r-marked component.
-+ release
-    - update to conform with Mozilla coding style for Brick
-    - Tag release of 0.0.1
-    - Cleanup and submit to a web component catalog/repository
++ before release
+    - Find, review Mozilla coding standard documents for Brick and make sure this conforms
+    - Tag release of 1.0.1
+    - Cleanup and submit to an appropriate web component catalog/repository
++ Investigate solution spiders crawling site and confirm empact on visibility
++ Review and improve assibility options
 
 ## prototyping
 
