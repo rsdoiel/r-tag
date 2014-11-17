@@ -18,28 +18,26 @@
          <noscript><a href="r-marked/README.md" title="Markdown formatted file">r-marked/README.md</a></noscript>
     </r-marked>
 
-    <!-- Step 1: Load in the marked library needed to transform markdown to HTML -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+                <!-- Putting it all together (from parts) -->
+        <!-- Step 1: Load marked from CDN -->
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 	<script>
-		if (typeof marked === 'undefined') {
-			document.write('<script src="js/marked.min.js">\x3C/script>');
-		}
-	</script>
-    <!-- Step 2: Load Brick so we pickup x-tag core -->
+	if (typeof marked === 'undefined') {
+		document.write('<script src="js/marked.min.js">\x3C/script>');
+	}
+	</script>-->
+    <!-- Step 2: Load brick -->
+    <!-- <script src="brick/brick-1.0.1.min.js"></script> -->
+    <!-- Step 3: Load custom elements -->
+    <!-- <script src="r-marked/r-marked.js"></script> -->
+
+    <!-- Putting it all together with r-tags combined with marked.js -->
+    <!-- Step 1: Load Brick -->
     <script src="brick/brick-1.0.1.min.js"></script>
+    <!-- Step 2: Load custom elements from r-tags.min.js -->
+    <script src="r-tags.min.js"></script>
     <!-- Step 3: Create your custom element that renders Markdown files to HTML using marked -->
     <script src="r-marked/r-marked.js"></script>
-    <script>
-    document.addEventListener('DOMComponentsLoaded', function () {
-        var r_marked_elem = document.querySelector('r-marked'),
-            event_name = 'progress';
-
-        console.log("Example: adding event listener for", event_name);
-        r_marked_elem.addEventListener(event_name, function (ev) {
-            console.log("got", event_name, "event, state", ev.detail.state);
-        });
-    });
-    </script>
 <!-- START: Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
