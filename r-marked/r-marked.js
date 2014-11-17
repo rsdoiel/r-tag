@@ -98,13 +98,13 @@
                 elem.innerHTML = '<pre>' + data + '</pre>';
             } else {
                 marked.setOptions({
-                    gfm: self.getAttribute('gfm'),
-                    tables: self.getAttribute('tables'),
-                    breaks: self.getAttribute('breaks'),
-                    pedantic: self.getAttribute('pedantic'),
-                    sanitize: self.getAttribute('sanitize'),
-                    smartLists: self.getAttribute('smartLists'),
-                    smartypants: self.getAttribute('smartypants')
+                    gfm: elem.getAttribute('gfm'),
+                    tables: elem.getAttribute('tables'),
+                    breaks: elem.getAttribute('breaks'),
+                    pedantic: elem.getAttribute('pedantic'),
+                    sanitize: elem.getAttribute('sanitize'),
+                    smartLists: elem.getAttribute('smartLists'),
+                    smartypants: elem.getAttribute('smartypants')
                 });
                 marked(data, function (err, content) {
                     elem.innerHTML = content;
@@ -141,25 +141,25 @@
                 attribute: { url: ""}
             },
             gfm: {
-                 attribute: {bool: true}
+                attribute: {bool: true}
             },
             tables: {
-                 attribute: {bool: true}
+                attribute: {bool: true}
             },
             breaks: {
-                 attribute: {bool: false}
+                attribute: {bool: false}
             },
             pedantic: {
-                 attribute: {bool: false}
+                attribute: {bool: false}
             },
             sanitize: {
-                 attribute: {bool: true}
+                attribute: {bool: true}
             },
             smartLists: {
-                 attribute: {bool: true}
+                attribute: {bool: true}
             },
             smartypants: {
-                 attribute: {bool: false}
+                attribute: {bool: false}
             }
         }
     });
