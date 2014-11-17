@@ -1,6 +1,6 @@
 {
   "name": "r-tags",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Web Components for rendering markdown browser side",
   "main": "index.html",
   "scripts": {
