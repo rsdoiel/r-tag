@@ -1,6 +1,7 @@
 
 # todo
 
++ Concert to use platform.js rather than x-tags/brick
 + Re-think r-assert to remove use of eval() and have a very declaritive syntax
 	+ detect HTML elements exists using CSS selector syntax
 	+ detect HTML element values using CSS selector syntax
