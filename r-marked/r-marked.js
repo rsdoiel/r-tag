@@ -21,11 +21,11 @@
     function httpGET(url, callback, progress) {
         var request;
 
-        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        if (window.XMLHttpRequest !== undefined) { // Mozilla, Safari, ...
             request = new XMLHttpRequest();
-        } else if (typeof XDomainRequest !== 'undefined') { // IE 9
+        } else if (XDomainRequest !== undefined) { // IE 9
             request = new XDomainRequest();
-        } else if (typeof window.ActiveXObject !== 'undefined') { // IE 8 and older
+        } else if (window.ActiveXObject !== undefined) { // IE 8 and older
             try {
                 request = new ActiveXObject("Msxml2.XMLHTTP");
             } catch (err1) {
@@ -38,14 +38,14 @@
         }
 
         if (!request) {
-            if (typeof callback !== 'undefined') {
+            if (callback !== undefined) {
                 callback("Can't create request object");
             }
             return false;
         }
-        if (typeof callback !== 'undefined') {
+        if (callback !== undefined) {
             request.onreadystatechange = function () {
-                if (typeof progress !== 'undefined') {
+                if (progress !== undefined) {
                     switch (request.readyState) {
                     case 0:
                         progress("uninitialized", request);
@@ -94,7 +94,7 @@
                 console.error("ERROR", err);
                 return;
             }
-            if (typeof marked === 'undefined') {
+            if (marked === undefined) {
                 elem.innerHTML = '<pre>' + data + '</pre>';
             } else {
                 marked.setOptions({
@@ -107,6 +107,9 @@
                     smartypants: elem.getAttribute('smartypants')
                 });
                 marked(data, function (err, content) {
+                    if (err) {
+                        console.log(err);
+                    }
                     elem.innerHTML = content;
                 });
             }
@@ -126,12 +129,12 @@
     xtag.register('r-marked', {
         lifecycle: {
             created: function () {
-                if (typeof this.href !== 'undefined' && this.href) {
+                if (this.href !== undefined && this.href) {
                     loadContent(this, resolveURL(document.URL, this.href));
                 }
             },
             attributeChanged: function () {
-                if (typeof this.href !== 'undefined' && this.href) {
+                if (this.href !== undefined && this.href) {
                     loadContent(this, resolveURL(document.URL, this.href));
                 }
             }

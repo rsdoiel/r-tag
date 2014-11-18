@@ -12,8 +12,8 @@
     "use strict";
     function parseWindowSearch(arg_string) {
         var args = {};
-            
-        if (typeof arg_string === 'undefined' || arg_string === '') {
+
+        if (arg_string === undefined || arg_string === '') {
             return {};
         }
         arg_string.substring(1).split("&").forEach(function (pair) {

@@ -8,18 +8,19 @@
  * @license: BSD 2-clause License
  */
 /*jslint browser: true, indent: 4 */
-(function (window, document) {
+/*global window, xtag */
+(function (document) {
     "use strict";
     xtag.register('r-assert', {
         lifecycle: {
             created: function () {
-                var element;
-
                 function assembleElement(element, attribute, value) {
                     var new_element = document.createElement(element);
                     new_element.setAttribute(attribute, value);
                     return new_element;
                 }
+                // FIXME: This is fine for proof of concept but
+                // dangerous. Rethink this!!!!
                 if (eval(this.assert) === true) {
                     this.appendChild(assembleElement(this.element, this.attribute, this.onsuccess));
                 } else {
@@ -45,4 +46,4 @@
             }
         }
     });
-}(window, document));
+}(document));
