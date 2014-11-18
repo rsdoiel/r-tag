@@ -8,6 +8,7 @@ Here's the basic algorithm
 1. get the keys of all the URL parameters
 2. for each key that matches the id attribute of a _r-marked_ custom element update the href triggering a fetch and render if the content.
 
+
 ## USAGE
 
 We have an HTML page with two _r-marked_ elements. One had the _id_ attribute of *main* and the other of *other*.  They start with a default href value in each.
@@ -18,7 +19,7 @@ We have an HTML page with two _r-marked_ elements. One had the _id_ attribute of
         The first is <em>r-marked</em> and the second is <em>r-args</em>.
         The custom element <em>r-marked</em> has an id of &ldquo;main&rdquo; and the 
         second has an id of &ldquo;other&rdquo;. Initially both are empty showing some
-        default text. Click <a href="?main=README.md&other=NAV-DEMO.md">Here</a> to
+        default text. Click <a href="?main=README-r-tags.md&other=NAV-DEMO.md">Here</a> to
         run the demo. <a href="./demo.html">Reset</a> the demo.
         </p>
         <section class="main">
